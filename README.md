@@ -1,36 +1,35 @@
 <h1>SwiftCourier Backend API</h1>
 <p>The core API service for the SwiftCourier logistics system.</p>
 
-<h3> Deployment Status</h3>
+<h2>🚀 Deployment Status</h2>
 <ul>
   <li><b>Platform:</b> Render</li>
   <li><b>Production URL:</b> <a href="https://courier-backend-rr5t.onrender.com">https://courier-backend-rr5t.onrender.com</a></li>
 </ul>
 
-<h3>🛠 Tech Stack</h3>
-<ul>
-  <li><b>Runtime:</b> Node.js</li>
-  <li><b>Framework:</b> Express.js</li>
-  <li><b>Database:</b> MongoDB</li>
-</ul>
-
-<h3>⚙️ Local Development</h3>
-<ol>
-  <li>Clone the repository and run <code>npm install</code>.</li>
-  <li>Create a <code>.env</code> file in the root directory:</li>
-</ol>
+<h2>⚙️ Local Development</h2>
 <pre>
 PORT=5000
 MONGODB_URI=your_mongodb_connection_string
 JWT_SECRET=your_secret_key
 </pre>
-<p>3. Start the server: <code>node server.js</code></p>
-
-<h3> Production Notes</h3>
-<ul>
-  <li><b>CORS:</b> The <code>server.js</code> is configured to whitelist your Vercel production URL.</li>
-  <li><b>MongoDB:</b> Ensure <code>0.0.0.0/0</code> is whitelisted in your Atlas Network Access settings.</li>
-</ul>
 
 <hr>
-<p><b>Founder:</b> Binayak Joshi | Full-Stack Developer</p>
+
+<h2>📚 API Documentation</h2>
+<p>Base URL: <code>https://courier-backend-rr5t.onrender.com</code></p>
+
+<table border="1" style="width:100%; border-collapse: collapse;">
+  <tr style="background-color: #f2f2f2;">
+    <th>Method</th><th>Endpoint</th><th>Description</th><th>Auth Required</th>
+  </tr>
+  <tr><td>POST</td><td><code>/api/auth/register</code></td><td>Register a new user</td><td>No</td></tr>
+  <tr><td>POST</td><td><code>/api/auth/login</code></td><td>Login and receive token</td><td>No</td></tr>
+  <tr><td>POST</td><td><code>/api/bookings</code></td><td>Create new shipment</td><td>Yes</td></tr>
+  <tr><td>GET</td><td><code>/api/track/:id</code></td><td>Track a shipment</td><td>No</td></tr>
+</table>
+
+<p>All protected routes require the header: <code>Authorization: Bearer &lt;token&gt;</code></p>
+
+<hr>
+<p><b>Founder:</b> Binayak Joshi</p>
