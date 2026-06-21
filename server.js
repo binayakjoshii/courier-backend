@@ -7,7 +7,15 @@ const app = express();
 const PORT = process.env.PORT || 5000;
 
 // Middlewares
-app.use(cors()); 
+// Replace the URL below with your actual Vercel deployment URL
+app.use(cors({
+  origin: [
+    "http://localhost:3000", 
+    "https://courierr-frontend.vercel.app" 
+  ],
+  credentials: true
+}));
+
 app.use(express.json()); 
 
 // --- ROUTES ---
@@ -17,10 +25,8 @@ app.use('/api/auth', authRoutes);
 const bookingRoutes = require('./routes/bookingRoutes');
 app.use('/api/bookings', bookingRoutes);
 
-
- const trackingRoutes = require('./routes/trackingRoutes');
- app.use('/api/track', trackingRoutes);
-
+const trackingRoutes = require('./routes/trackingRoutes');
+app.use('/api/track', trackingRoutes);
 
 // Basic Health Check Route
 app.get('/', (req, res) => {
