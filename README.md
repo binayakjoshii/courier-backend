@@ -1,7 +1,7 @@
 <h1>SwiftCourier Backend API</h1>
 <p>The core API service for the SwiftCourier logistics system.</p>
 
-<h3>🚀 Deployment Status</h3>
+<h3> Deployment Status</h3>
 <ul>
   <li><b>Platform:</b> Render</li>
   <li><b>Production URL:</b> <a href="https://courier-backend-rr5t.onrender.com">https://courier-backend-rr5t.onrender.com</a></li>
@@ -26,7 +26,7 @@ JWT_SECRET=your_secret_key
 </pre>
 <p>3. Start the server: <code>node server.js</code></p>
 
-<h3>🛡️ Production Notes</h3>
+<h3> Production Notes</h3>
 <ul>
   <li><b>CORS:</b> The <code>server.js</code> is configured to whitelist your Vercel production URL.</li>
   <li><b>MongoDB:</b> Ensure <code>0.0.0.0/0</code> is whitelisted in your Atlas Network Access settings.</li>
