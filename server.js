@@ -7,11 +7,11 @@ const app = express();
 const PORT = process.env.PORT || 5000;
 
 // Middlewares
-// Replace the URL below with your actual Vercel deployment URL
+
 app.use(cors({
   origin: [
     "http://localhost:3000", 
-    "https://courierr-frontend.vercel.app" 
+    "https://courier-frontend-nine-henna.vercel.app"
   ],
   credentials: true
 }));
